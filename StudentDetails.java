@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class StudentDetails {
     StudentDetails(String name, String rollNo, int totalMarks) {
         System.out.println("Student name is: " + name);
@@ -7,9 +9,18 @@ public class StudentDetails {
     }
 
     public static void main(String[] args) {
-        StudentDetails s1 = new StudentDetails("Himanshu Vinchurekar", "98839Sunbeam", 80);
-        System.out.println();
-        StudentDetails s2 = new StudentDetails("Arnav Kumar", "98834Sunbeam", 95);
+        Scanner sc = new Scanner(System.in);
 
+        System.out.print("Enter name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter roll number: ");
+        String rollNo = sc.nextLine();
+
+        System.out.print("Enter total marks: ");
+        int totalMarks = sc.nextInt();
+        StudentDetails s1 = new StudentDetails(name, rollNo, totalMarks);
+
+        sc.close();
     }
 }
