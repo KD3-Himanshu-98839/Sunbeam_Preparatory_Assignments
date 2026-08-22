@@ -36,6 +36,7 @@ public class NumberSystemConversion {
         }
         System.out.print("\nHexa Decimal equivalent: " + hexadecimalString);
 
+        sc.close();
 
     }
 }
