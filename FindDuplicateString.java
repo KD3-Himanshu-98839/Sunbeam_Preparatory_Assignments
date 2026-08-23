@@ -11,8 +11,7 @@ public class FindDuplicateString {
             boolean isDuplicate = false;
 
             // Checks if the current string has already appeared before.
-            // If we don't do this, the same duplicate (like Apple) will be printed multiple
-            // times.
+            // If we don't do this, the same duplicate (like Apple) will be printed multiple times.
             for (int k = 0; k < i; k++) {
                 if (li.get(i).equals(li.get(k))) {
                     isDuplicate = true;
@@ -22,12 +21,11 @@ public class FindDuplicateString {
 
             // Skip this string because it was already processed earlier.
             if (isDuplicate) {
-                continue; // Using break here would stop the whole program instead of checking the
-                          // remaining strings.
+                continue; // Using break here would stop the whole program instead of checking the remaining strings.
 
             }
 
-            // Checks if the current string appears again later in the array.
+            
             for (int j = i + 1; j < li.size(); j++) {
                 if (li.get(i).equals(li.get(j))) {
                     System.out.println(li.get(i));
